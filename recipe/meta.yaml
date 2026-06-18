@@ -1,5 +1,5 @@
 {% set name = "arize-phoenix" %}
-{% set version = "12.35.0" %}
+{% set version = "15.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/arize_phoenix-{{ version }}.tar.gz
-  sha256: 0833c4b478ebb7b02d7f74f04f6bbe6d68ed7cebf2d22baffc5eb4aaf4358002
+  sha256: e1058389ce4fba626548697945e32cd566bc15483351f080fa496dc06a1ca0d1
 
 build:
   noarch: python
@@ -26,8 +26,8 @@ requirements:
     - aiosqlite
     - alembic >=1.3.0, <2
     - arize-phoenix-client
-    - arize-phoenix-evals >=0.13.1
-    - arize-phoenix-otel >=0.5.1
+    - arize-phoenix-evals
+    - arize-phoenix-otel
     - authlib
     - cachetools
     - email-validator
@@ -39,11 +39,16 @@ requirements:
     - httpx
     - jinja2
     - jmespath
+    - joserfc
+    - jsonpath-ng
+    - jsonschema
     - ldap3
+    - mcp
     - numba >=0.60.0
     - numpy
-    - openinference-instrumentation >=0.1.12
-    - openinference-semantic-conventions >=0.1.9
+    - openinference-instrumentation >=0.1.44
+    - openinference-instrumentation-openai >=0.1.41
+    - openinference-semantic-conventions >=0.1.26
     - opentelemetry-exporter-otlp
     - opentelemetry-proto >=1.12.0
     - opentelemetry-sdk
@@ -55,14 +60,22 @@ requirements:
     - psutil
     - pyarrow
     - pydantic >=2.1.0,<3
+    - pydantic-ai-slim >=1.95.0
+    - anthropic
+    - boto3
+    - aioboto3
+    - openai
+    - tiktoken
+    - pystache
     - python-dateutil
     - python-multipart
+    - pyyaml
     - scikit-learn
     - scipy
-    - sqlalchemy >=2.0.4, <3
+    - sqlalchemy >=2.0.46, <3
     - sqlean.py >=3.45.1
     - starlette
-    - strawberry-graphql >=0.270.1
+    - strawberry-graphql >=0.314.3
     - tqdm
     - typing-extensions >=4.6
     - umap-learn
